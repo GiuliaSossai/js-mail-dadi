@@ -11,7 +11,8 @@ let risultato = 'false';
 const mailUser = 'annarossi@gmail.com'; //prompt('inserisci la tua email');
 console.log(mailUser);
 
-for (let i = 0; i<listaMail.length; i++){ //console.log(listaMail[i]);
+for (let i = 0; i<listaMail.length; i++){
+  //console.log(listaMail[i]);
   if(listaMail[i] === mailUser){
     //console.log('trovata!');
     risultato = true;
@@ -33,8 +34,7 @@ if (risultato == true){
 }
 
 
-
-//generare numero random da 1 a 6 per utente
+//far scegliere a utente un numero da 1 a 6 compresi
 //generare numero random da 1 a 6 per pc
 //confrontare due numeri
 //vince chi fa numero più alto
@@ -49,15 +49,21 @@ console.log('pc', numPc);
 
 //confronto i 2 numeri e stabilisco chi vince
 let msg ='';
+let dadi = document.getElementById('dadi');
+console.log(dadi);
+
 if (numUser > numPc){
   msg= 'hai vinto';
   console.log(msg);
+  dadi.innerHTML = msg;
 }
 if (numUser < numPc){
   msg= 'hai perso';
   console.log(msg);
+  dadi.innerHTML = msg;
 }
 if (numUser === numPc){
   msg= 'nessuno ha vinto';
   console.log(msg);
+  dadi.innerHTML = msg;
 }
